@@ -1,4 +1,4 @@
-# This project is a cooperative study Wendell-Paranhas and Jedeias
+# This project is a cooperative study Wendell-Paranhos and Jedeias
 
 ## Technologies used:
 
