@@ -1,0 +1,287 @@
+*{
+    transition: all .2s linear;
+}
+
+
+body{
+
+    background: var(--bg-grey-light);
+         /* cores de texto */
+  --text-white: #ffffff;
+  --text-dark: #142136;
+
+  /* cores de fundo */
+  --bg-grey-light: #ffffff;
+  --bg-white: #ffffff;
+  --bg-blue-dark: #142136;
+  --bg-indigo: #6366f1;
+
+}
+
+.dark {
+    --text-white: #e6e6e6;
+    --text-dark: #ffffff;
+    --bg-grey-light: #2d2d2d;
+    --bg-white: #22395d;
+    --bg-blue-dark: #2d2d2d;
+    --bg-indigo: #7577e1;
+}
+  
+
+header{
+    position: fixed;
+    top: 0;
+    left: -120%;
+    z-index: 1000;
+    height: 100%;
+    width: 30rem;
+    background: var(--bg-blue-dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    text-align: center;
+}
+
+header.toggle{
+    left: 0;
+
+}
+
+header > .navbar{
+    width: 100%;
+}
+
+header > .navbar > ul{
+    list-style: none;
+    padding: 1rem 3rem;
+}
+
+header > .navbar > ul > li > a{
+    display: block;
+    padding: 0.5rem;
+    margin: 1.5rem 0;
+    background: #333;
+    color: #fff;
+    font-size: 2rem;
+    border-radius: 5rem;
+}
+
+header > .navbar > ul > li > a:hover{
+    background-color: #fff;
+    color: #000;
+    box-shadow: 0 0 50px #fff;
+}
+
+
+#menu{
+    position: fixed;
+    top: 0.5%;
+    right: 0.1%;
+    color: #000;
+    cursor: pointer;
+    font-size: 1.7rem;
+    padding: 0.5rem 0.5rem;
+    z-index: 1000;
+}
+
+.title{
+    color: #fff;
+    font-size: 28px;
+    border-bottom: 1px solid #fff;
+}
+
+header h1 {
+    margin: 0;
+    color: #fff;
+    border-bottom: 1px solid #fff;
+    font-size: 44px;
+}
+  
+
+.tabela {
+    margin: 2rem;
+    overflow-x: auto; 
+    background: #fff;
+    box-shadow: 0 0 30px #fff;
+}
+  
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    overflow: hidden;
+}
+  
+
+th {
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+}
+  
+ 
+td {
+    border: 1px solid #333;
+    padding: 1rem;
+    text-align: center;
+}
+  
+.perfil {
+    width: 100px;
+    height: 100px;
+    background:#333;
+    border-radius: 50%;
+    cursor: pointer;
+    position: fixed;
+    right: -50px; 
+    bottom: 8rem;
+    z-index: 1;
+}
+  
+.foto-perfil {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+  
+.informacoes {
+    display: none;
+    width: 200px;
+    padding: 20px;
+    background-color: #181818;
+    border-radius: 10px 50px 50px 10px;
+    position: fixed;
+    bottom: 1.5rem;
+    right: 0.5rem;
+    color: #fff;
+    box-shadow: 0 0 50px #000;
+}
+
+
+#infomacoes {
+    display: none;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+  }
+
+.informacoes::before {
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-color: #333333; 
+    border-radius: 50%;
+    right: -50px; 
+    top: 0;
+}
+  
+
+
+.buttons {
+    width: 100%;
+    display: flex;
+    justify-content:space-aroun;
+    margin-bottom: 40px;
+}
+.button {
+    width: 200px;
+    padding: 5px;
+    height: 40px;
+    border: none;
+    border-radius: 10px;
+    font-family: inherit;
+    cursor: pointer;
+    background-color: var(--bg-indigo);
+    color: var(--text-white);
+    font-size: 16px;
+    font-weight: 400;
+    text-transform: capitalize;
+}
+
+ 
+@media screen and (max-width: 600px) {
+   
+    th, td {
+      padding: 0.5rem;
+    }
+}
+  
+
+
+@media (max-width:1200px) {
+    .container{
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+    }
+
+    header{
+        width: 60%;
+    }
+   .navbar{
+    margin: 0 auto;
+   }
+
+   .face.facel{
+    width: 500px;
+   }
+
+   header{
+    left: -120%;
+   }
+
+   #menu{
+    display: block;
+   }
+
+   header.toggle{
+    left: 0;
+   }
+
+}
+
+
+
+@media(max-width:991px){
+    header{
+     left: -120%;
+    }
+ 
+    #menu{
+     display: block;
+    }
+ 
+    header.toggle{
+     left: 0;
+    }
+ 
+    
+ }
+ 
+ @media(max-width:746px){
+
+    header{
+        width: 80%;
+    }
+
+    .navbar{
+        margin: 0 auto;
+    }
+
+  }
+ 
+ @media(max-width:400px){
+     header{
+      width: 100vw;
+     }
+ 
+ 
+     
+  }
